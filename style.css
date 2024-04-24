@@ -1,12 +1,21 @@
+:root{
+    --container: 5%;
+}
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body{
+.body{
     position: relative;
     font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #252422;
+}
+.body--black{
+    background-color: #252422;
+    color: #f9cdcd;
 }
 
 .header{
@@ -16,7 +25,7 @@ body{
     width: 100%;
     height: 130px;
     .header__container{
-        margin: 0 80px;
+        margin: 0 var(--container);
         height: 100%;
         display: flex;
         align-items: center;
@@ -24,15 +33,22 @@ body{
     }
     .header__logo{
         width: 160px;
+        fill: #f4f4f4;
+    }
+    .header__logo--black{
+        fill: #252422;
+    }
+    .header__logo--pink{
+        fill: #f9cdcd;
     }
     .header__nav{
         display: flex;
         padding-right: 100px;
     }
     .header__nav-item{
-        color: white;
+        color: #f4f4f4;
         text-decoration: none;
-        margin: 0 30px;
+        margin: 0 2rem;
         position: relative;
         &:after{
             height: 1px;
@@ -40,7 +56,7 @@ body{
             content: '';
             bottom: 0;
             left: 0;
-            background-color: white;
+            background-color: #f4f4f4;
             width: 0;
             transition: all 0.35s ease;
         }
@@ -48,12 +64,33 @@ body{
             width: 100%;
         }
     }
+    .header__nav-item--current:after{
+        width: 100%;
+    }
+    .header__nav-item--black{
+        color: black;
+        &:after{
+            background-color: #252422;
+        }
+    }
+    .header__nav-item--pink{
+        color: #f9cdcd;
+        &:after{
+            background-color: #f9cdcd;
+        }
+    }
     .header__menu{
         background: inherit;
         border: none;
-        color: white;
-        font-size: 24px;
+        color: #f4f4f4;
+        font-size: 1.3rem;
         cursor: pointer;
+    }
+    .header__menu--black{
+        color: #252422;
+    }
+    .header__menu--pink{
+        color: #f9cdcd;
     }
 }
 
@@ -68,9 +105,39 @@ body{
 }
 
 
-@keyframes he-na-i-ani {
-    0% {
+.awards{
+    .awards__container{
+        margin: 0 var(--container);
+        border-bottom: #252422 solid 1px;
+        padding: 13% 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
-    100% {
+    .awards__link{
+        text-decoration: none;
+        color: #252422;
+        margin: 0 10%;
+        text-align: center;
+        height: 200px;
+         &:hover{
+            .awards__logo{
+                transform: scale(1.05);
+                transition: all 0.3s ease-in-out;
+            }
+            .awards__title{
+                border-bottom: #252422 solid 3px;
+            }
+        }
+    }
+    .awards__logo{
+        width: 170px;
+        height: 150px;
+    }
+    .awards__title{
+        margin-top: 40px;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        font-weight: 500;
     }
 }
