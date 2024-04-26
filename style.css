@@ -1,6 +1,4 @@
-:root{
-    --container: 5%;
-}
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -19,13 +17,15 @@
 }
 
 .header{
-    position: absolute;
+    position: fixed;
     top: 0;
+    left: 0;
     z-index: 1;
     width: 100%;
     height: 130px;
     .header__container{
-        margin: 0 var(--container);
+        width: 90%;
+        margin: 0 auto;
         height: 100%;
         display: flex;
         align-items: center;
@@ -106,10 +106,13 @@
 
 
 .awards{
+    width: 100%;
+    height: 70vh;
     .awards__container{
-        margin: 0 var(--container);
         border-bottom: #252422 solid 1px;
-        padding: 13% 0;
+        width: 90%;
+        height: 100%;
+        margin: 0 auto;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -117,27 +120,185 @@
     .awards__link{
         text-decoration: none;
         color: #252422;
-        margin: 0 10%;
+        width: 33.3%;
         text-align: center;
-        height: 200px;
+        height: 40%;
          &:hover{
             .awards__logo{
                 transform: scale(1.05);
                 transition: all 0.3s ease-in-out;
             }
             .awards__title{
-                border-bottom: #252422 solid 3px;
+                text-decoration: underline #252422 2px;
             }
         }
     }
     .awards__logo{
-        width: 170px;
-        height: 150px;
+        display: block;
+        margin: 10% auto;
+        width: 40%;
+        height: 40%;
     }
     .awards__title{
-        margin-top: 40px;
+        display: block;
+        width: 40%;
+        margin: 0 auto;
+        line-height: 1.2rem;
         text-transform: uppercase;
         font-size: 0.8rem;
         font-weight: 500;
     }
 }
+
+
+
+.overview{
+    width: 100%;
+    height: 50vh;
+    .overview__container{
+        width: 90%;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .overview__content{
+        width: 50%;
+        height: 100%;
+        padding: 80px 0;
+    }
+    .overview__link{
+        display: inline-block;
+        text-decoration: none;
+        color: #252422;
+        border: #252422 1px solid;
+        border-radius: 20px;
+        padding: 8px 30px;
+        margin-top: 40px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        background-image: linear-gradient(to top, #252422 50%, #f4f4f4 50%);
+        background-size: 100% 200%;
+        &:hover{
+            color: #f4f4f4;
+            animation: button-animation 0.25s 1 ease-in-out forwards;
+            
+        }
+        &:not(hover){
+            animation: button-animation-off 0.25s 1 ease-in-out forwards;
+        }
+    }
+    .overview__text{
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 2.5rem;
+    }
+    .overview__image-svg{
+        fill: #252422;
+    }
+}
+
+
+
+
+.case-studies{
+    width: 100%;
+    height: calc(width);
+    margin-bottom: 10em;
+    .case-studies__container{
+        width: 90%;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+    }
+    .case-studies__card{
+        width: 32%;
+        height: 100%;
+        text-decoration: none;
+        color: #252422;
+        text-transform: uppercase;
+        &:hover .case-studies__title{
+            text-decoration: #252422 underline 1.5px;
+        }
+        &:hover .case-studies__media{
+            transform: scale(1.05);
+            transition: all 0.2s ease-in-out;
+        }
+        &:not(hover) .case-studies__media{
+            transform: scale(1);
+            transition: all 0.2s ease-in-out;
+        }
+    }
+    .case-studies__media-container{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .case-studies__media{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        
+    }
+    .case-studies__title{
+        margin: 10px 0;
+        font-size: 1.3em;
+    }
+    .case-studies__text{
+        width: 60%;
+        font-size: 0.9em;
+        font-weight: 500;
+    }
+}
+
+
+
+
+.feature{
+    width: 100%;
+    height: calc(width);
+    .feature__container{
+        width: 95%;
+        height: 100%;
+        margin-left: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        overflow: hidden;
+    }
+    .feature__card{
+        width: 50%;
+        height: 100%;
+    }
+    .feature__logo{
+        height: 50px;
+    }
+}
+
+@keyframes button-animation{
+    0%{
+        color: #252422;
+        background-position: -100% 0;
+    }
+    100%{
+        color: #f4f4f4f4;
+        background-position: 0 100%;
+    }
+}
+@keyframes button-animation-off{
+    0%{
+        color: #f4f4f4f4;
+        background-position: 0 100%;
+    }
+    100%{
+        color: #252422;
+        background-position: -100% 0;
+    }
+}
+
+
+
+
