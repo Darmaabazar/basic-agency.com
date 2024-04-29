@@ -7,10 +7,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b6ed309f66.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./style.css">
     <title>basic-agency.com</title>
 </head>
-<body class="body">
+<body class="body" data-scroll-container>
     <div class="header">
         <div class="header__container">
             <a href="./index.html" class="header__logo-link">
@@ -38,12 +37,12 @@
         </svg>
     </button>
 
-    <div class="hero">
+    <div class="hero" data-scroll-section>
         <video class="hero__video" autoplay  preload="metadata" loop playsinline src="./video/c6fb986a862cbe643c40cbdd0318ebc495efb187.mp4" data-can-play="true" ></video>
     </div>
 
 
-    <div class="awards">
+    <div class="awards" data-scroll-section>
         <div class="awards__container">
             <a href="#" class="awards__link">
                 <svg class="awards__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 91 28">
@@ -68,7 +67,7 @@
     </div>
 
 
-    <div class="overview">
+    <div class="overview" data-scroll-section>
         <div class="overview__container">
             <div class="overview__content">
 
@@ -85,7 +84,7 @@
 
 
 
-    <div class="case-studies">
+    <div class="case-studies" data-scroll-section>
         <div class="case-studies__container">
             <a href="#" class="case-studies__card">
                 <div class="case-studies__media-container">
@@ -116,7 +115,7 @@
 
 
     <!-- feature -->
-    <div class="feature">
+    <div class="feature" data-scroll-section>
         <h1 class="feature__big-title">FEATURED <br> ENGAGEMENTS</h1>
         <div class="feature__container">
             <div class="feature__card">
@@ -149,14 +148,14 @@
 
 
 
-    <div class="spotlight">
+    <div class="spotlight" data-scroll-section id="spotlight">
         <div class="spotlight__container">
-            <div class="spotlight__content">
+            <div class="spotlight__content" data-scroll data-scroll-sticky data-scroll-target="#spotlight">
                 <h1 class="spotlight__title">BASIC/DEPT® HELPS BRANDS ● CONNECT W/ CULTURE</h1>
                 <p class="spotlight__text">ADWEEK <span class="spotlight__text--bold">AGENCY SPOTLIGHT</span></p>
                 <a href="./services.html" class="spotlight__link">ABOUT US</a>
             </div>
-            <div class="spotlight__media-container">
+            <div class="spotlight__media-container" data-scroll data-scroll-speed="7" data-scroll-offset="25%, 25%">
                 <video class="spotlight__media" autoplay preload="metadata" loop playsinline data-can-play="true" src="./video/Culture-Loop_v1.mp4"></video>
             </div>
         </div>
@@ -164,7 +163,7 @@
 
 
 
-    <div class="featured-news">
+    <div class="featured-news" data-scroll-section>
         <div class="featured-news__container">
             <div class="featured-news__header">
                 <h1 class="featured-news__header-title">FEATURED<br>NEWS</h1>
@@ -365,7 +364,7 @@
 
 
 
-    <div class="footer">
+    <div class="footer" data-scroll-section>
         <div class="footer__content">
             <div class="footer__container">
                 <div class="footer__content-header">
@@ -425,5 +424,9 @@
             </div>
         </div>
     </div>
+
+
+    
+    
 </body>
 </html>
