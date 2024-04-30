@@ -13,7 +13,9 @@ module.exports = {
     output: {
         filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, 'dist'),
-        clean: true,
+        clean: {
+            keep: /media\//,
+        },
     },
     optimization: {
         moduleIds: 'deterministic',
@@ -33,10 +35,6 @@ module.exports = {
             {
                 test: /\.css$/i,
                 use: ['style-loader', 'css-loader'],
-            },
-            {
-                test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                type: 'asset/resource',
             },
         ],
     },
