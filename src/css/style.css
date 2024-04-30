@@ -546,16 +546,16 @@
 
 .footer{
     width: 100%;
-    .footer__container{
+    &__container{
         width: 90%;
         margin: 0 auto;
     }
-    .footer__content{
+    &__content{
         background-color: #252422;
         color: #f4f4f4;
         padding: 120px 0;
     }
-    .footer__content-header{
+    &__content-header{
         display: flex;
         justify-content: space-between;
         align-items: start;

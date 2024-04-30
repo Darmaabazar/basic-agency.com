@@ -7,7 +7,32 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
+            filename: 'index.html',
             template: './src/index.html',
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'services.html',
+            template: './src/services.html',
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'about.html',
+            template: './src/about.html',
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'blog.html',
+            template: './src/blog.html',
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'thinking.html',
+            template: './src/thinking.html',
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'careers.html',
+            template: './src/careers.html',
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'contact.html',
+            template: './src/contact.html',
         }),
     ],
     output: {
@@ -34,8 +59,29 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/i,
-                use: ['style-loader', 'css-loader'],
-            },
+                use: [
+                  "style-loader",
+                  {
+                    loader: 'css-loader',
+                    options: {
+                      importLoaders: 1,
+                    }
+                  },
+                  {
+                    loader: "postcss-loader",
+                    options: {
+                      postcssOptions: {
+                        plugins: [
+                          [
+                            "postcss-nested",
+                            "autoprefixer"
+                          ],
+                        ],
+                      },
+                    },
+                  },
+                ],
+              },
         ],
     },
 };
