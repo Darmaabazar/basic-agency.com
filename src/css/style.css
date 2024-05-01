@@ -27,6 +27,27 @@
     background-color: #252422;
 }
 
+.hero-animation-con{
+    display: inline-block;
+    overflow: hidden;
+    height: 70px;
+}
+.hero-animation{
+    display: inline-block;
+    position: relative;
+    margin-top: 70px;
+    animation: hero-animation 0.5s 1 ease-in-out forwards;
+    &--delay-1{
+        animation-delay: 0.2s;
+    }
+    &--delay-2{
+        animation-delay: 0.4s;
+    }
+    &--delay-3{
+        animation-delay: 0.6s;
+    }
+}
+
 
 
 .header{
@@ -140,7 +161,73 @@
 .hero{
     width: 100%;
     height: 100vh;
-    .hero__video{
+    &__container{
+        width: 90%;
+        height: 100%;
+        margin: 0 auto;
+    }
+    &__content{
+        width: 100%;
+        padding: 170px 0;
+    }
+    &__title{
+        font-size: 6rem;
+        font-weight: 700;
+        line-height: 5.5rem;
+    }
+    &__footer{
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: end;
+        flex-wrap: wrap;
+    }
+    &__text{
+        width: 380px;
+        font-weight: 500;
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+        margin-right: 60px;
+    }
+    &__nav{
+        display: flex;
+    }
+    &__nav-item{
+        color: #f4f4f4;
+        text-decoration: none;
+        margin-right: 3rem;
+        position: relative;
+        &:after{
+            height: 1px;
+            position: absolute;
+            content: '';
+            bottom: 0;
+            left: 0;
+            background-color: #f4f4f4;
+            width: 0;
+            transition: all 0.35s ease;
+        }
+        &:hover:after{
+            width: 100%;
+        }
+    }
+    &__nav-item--current:after{
+        width: 100%;
+    }
+    &__nav-item--black{
+        color: black;
+        &:after{
+            background-color: #252422;
+        }
+    }
+    &__nav-item--pink{
+        color: #f9cdcd;
+        &:after{
+            background-color: #f9cdcd;
+        }
+    }
+    &__video{
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -680,6 +767,19 @@
         font-size: 0.7rem;
     }
 }
+
+
+
+
+@keyframes hero-animation{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: -80px;
+    }
+}
+
 
 @keyframes button-animation{
     0%{
