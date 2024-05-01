@@ -16,6 +16,19 @@
     color: #f9cdcd;
 }
 
+
+.disappear{
+    color: #252422;
+    background-color: #f4f4f4;
+    transition: background-color 1s;
+}
+.appear{
+    color: #f9cdcd;
+    background-color: #252422;
+}
+
+
+
 .header{
     position: fixed;
     top: 0;
@@ -356,9 +369,13 @@
 
 .spotlight{
     width: 100%;
-    height: 130vh;
+    height: 200vh;
     background-color: #252422;
     color: #f9cdcd;
+    &__color{
+        width: 100%;
+        height: 100%;
+    }
     .spotlight__container{
         width: 90%;
         height: 100%;
@@ -368,10 +385,11 @@
         align-items: start;
     }
     .spotlight__content{
+        position: relative;
+        top: 100px;
+        left: 0px;
         width: 50%;
-        height: 100%;
-        margin: 200px 0;
-        margin-right: 80px;
+        height: 50%;
     }
     .spotlight__link{
         display: inline-block;
@@ -409,8 +427,8 @@
     }
     .spotlight__media-container{
         width: 50%;
-        height: 100%;
-        margin: 80px 0;
+        height: 80%;
+        margin: 150px 0;
         overflow: hidden;
     }
     .spotlight__media{
