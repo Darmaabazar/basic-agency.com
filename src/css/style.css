@@ -16,6 +16,13 @@
     color: #f9cdcd;
 }
 
+.white-space{
+    margin-top: 300px;
+}
+.low-white-space{
+    margin-top: 100px;
+}
+
 
 .disappear{
     color: #252422;
@@ -216,13 +223,81 @@
         width: 100%;
     }
     &__nav-item--black{
-        color: black;
+        color: #252422;
         &:after{
             background-color: #252422;
         }
     }
     &__nav-item--pink{
         color: #f9cdcd;
+        &:after{
+            background-color: #f9cdcd;
+        }
+    }
+    &__circle-nav{
+        display: flex;
+        float: right;
+    }
+    &__circle-nav-item{
+        color: #f4f4f4;
+        text-decoration: none;
+        padding-left: 10px;
+        margin-right: 70px;
+        position: relative;
+        &:before{
+            box-sizing: border-box;
+            height: 20px;
+            width: 20px;
+            position: absolute;
+            content: '';
+            top: -2px;
+            left: -20px;
+            background-color: #f4f4f4;
+            border: #252422 solid 1px;
+            border-radius: 50%;
+        }
+        &:after{
+            box-sizing: border-box;
+            height: 0px;
+            width: 0px;
+            position: absolute;
+            content: '';
+            top: 7px;
+            left: -10px;
+            opacity: 0;
+            background-color: #252422;
+            border-radius: 50%;
+            transition: all 0.35s ease;
+        }
+        &:hover:after{
+            width: 10px;
+            height: 10px;
+            top: 3px;
+            left: -15px;
+            opacity: 1;
+        }
+    }
+    &__circle-nav-item--current:after{
+        width: 20px;
+        height: 20px;
+        top: -2px;
+        left: -20px;
+        opacity: 1;
+    }
+    &__circle-nav-item--black{
+        color: #252422;
+        &:before{
+            background-color: #f4f4f4;
+        }
+        &:after{
+            background-color: #252422;
+        }
+    }
+    &__circle-nav-item--pink{
+        color: #f9cdcd;
+        &:before{
+            background-color: #252422;
+        }
         &:after{
             background-color: #f9cdcd;
         }
@@ -769,6 +844,110 @@
 }
 
 
+
+.services{
+    width: 100%;
+    height: auto;
+    &__container{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+        border-top: #252422 solid 2px;
+        position: relative;
+    }
+    &__page-numbers{
+        width: 32%;
+        position: absolute;
+        top: 20px;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+    &__content{
+        width: 33%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        padding-right: 60px
+    }
+    &__link{
+        display: inline-block;
+        text-decoration: none;
+        color: #252422;
+        border: #252422 1px solid;
+        border-radius: 20px;
+        padding: 8px 30px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        background-image: linear-gradient(to top, #252422 50%, #f4f4f4 50%);
+        background-size: 100% 200%;
+        &:hover{
+            animation: button-animation 0.25s 1 ease-in-out forwards;
+            
+        }
+        &:not(hover){
+            animation: button-animation-off 0.25s 1 ease-in-out forwards;
+        }
+    }
+    &__title{
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 2.5rem;
+    }
+    &__text{
+        margin: 30px 0;
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+    &__card-container{
+        width: 67%;
+        display: flex;
+        justify-content: space-between;
+        border-left: #252422 solid 2px;
+    }
+    &__card{
+        margin-left: 20px;
+        width: 48%;
+        text-decoration: none;
+        color: #252422;
+        text-transform: uppercase;
+        &:hover .services__card-title{
+            text-decoration: #252422 underline 1.5px;
+        }
+        &:hover .services__media{
+            transform: scale(1.05);
+            transition: all 0.2s ease-in-out;
+        }
+        &:not(hover) .services__media{
+            transform: scale(1);
+            transition: all 0.2s ease-in-out;
+        }
+    }
+    &__media-container{
+        width: 100%;
+        overflow: hidden;
+    }
+    &__media{
+        width: 100%;
+        object-fit: cover;
+        
+    }
+    &__card-title{
+        margin: 10px 20px;
+        font-size: 1.3em;
+    }
+    &__card-text{
+        margin: 0 20px;
+        width: 60%;
+        font-size: 0.9em;
+        font-weight: 500;
+    }
+}
 
 
 @keyframes hero-animation{
