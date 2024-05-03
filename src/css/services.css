@@ -1,0 +1,103 @@
+.services{
+    width: 100%;
+    height: auto;
+    &__container{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+        border-top: #252422 solid 2px;
+        position: relative;
+    }
+    &__page-numbers{
+        width: 32%;
+        position: absolute;
+        top: 20px;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+    &__content{
+        width: 33%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        padding-right: 60px
+    }
+    &__link{
+        display: inline-block;
+        text-decoration: none;
+        color: #252422;
+        border: #252422 1px solid;
+        border-radius: 20px;
+        padding: 8px 30px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        background-image: linear-gradient(to top, #252422 50%, #f4f4f4 50%);
+        background-size: 100% 200%;
+        &:hover{
+            animation: button-animation 0.25s 1 ease-in-out forwards;
+            
+        }
+        &:not(hover){
+            animation: button-animation-off 0.25s 1 ease-in-out forwards;
+        }
+    }
+    &__title{
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 2.5rem;
+    }
+    &__text{
+        margin: 30px 0;
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+    &__card-container{
+        width: 67%;
+        display: flex;
+        justify-content: space-between;
+        border-left: #252422 solid 2px;
+    }
+    &__card{
+        margin-left: 20px;
+        width: 48%;
+        text-decoration: none;
+        color: #252422;
+        text-transform: uppercase;
+        &:hover .services__card-title{
+            text-decoration: #252422 underline 1.5px;
+        }
+        &:hover .services__media{
+            transform: scale(1.05);
+            transition: all 0.2s ease-in-out;
+        }
+        &:not(hover) .services__media{
+            transform: scale(1);
+            transition: all 0.2s ease-in-out;
+        }
+    }
+    &__media-container{
+        width: 100%;
+        overflow: hidden;
+    }
+    &__media{
+        width: 100%;
+        object-fit: cover;
+        
+    }
+    &__card-title{
+        margin: 10px 20px;
+        font-size: 1.3em;
+    }
+    &__card-text{
+        margin: 0 20px;
+        width: 60%;
+        font-size: 0.9em;
+        font-weight: 500;
+    }
+}
