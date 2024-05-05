@@ -1,0 +1,131 @@
+
+.about-hero{
+    width: 100%;
+    padding-top: 200px;
+    &__container{
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 25% 5% 65% 5%;
+        justify-content: space-between;
+        align-content: start;
+    }
+    &__item-1{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    &__item-2{
+        grid-column: 2/3;
+        grid-row: 2/4;
+    }
+    &__item-3{
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+    &__title{
+        font-size: 6rem;
+        line-height: 5.5rem;
+    }
+    &__paragraph{
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        margin-top: 40px;
+        animation: opacity 1.5s 1 ease-in-out forwards;
+    }
+    &__logo{
+        fill: #f9cdcd;
+        width: 40px;
+    }
+}
+
+
+
+.about-images{
+    width: 100%;
+    &__container{
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 25% 75%;
+        justify-content: space-between;
+        align-content: start;
+        padding-top: 200px;
+        border-top: #f9cdcd80 solid 2px;
+    }
+    &__item-1{
+        grid-column: 1/2;
+    }
+    &__item-2{
+        grid-column: 2/3;
+        position: relative;
+    }
+    &__copyright{
+        font-size: 0.8rem;
+        font-weight: 500;
+        line-height: 0.8rem;
+        margin: 700px 0;
+    }
+    &__img{
+        width: 55%;
+        object-fit: cover;
+        position: absolute;
+    }
+    &__img-1{
+        z-index: 3;
+        top: 0;
+        left: 0;
+        &:hover{
+            z-index: 5;
+        }
+    }
+    &__img-2{
+        z-index: 4;
+        top: 20%;
+        left: 10%;
+        &:hover{
+            z-index: 5;
+        }
+    }
+    &__img-3{
+        z-index: 2;
+        top: 10%;
+        left: 20%;
+        &:hover{
+            z-index: 5;
+        }
+    }
+    &__img-4{
+        z-index: 1;
+        top: 30%;
+        left: 45%;
+        &:hover{
+            z-index: 5;
+        }
+    }
+}
+
+
+
+.about-logo{
+    width: 100%;
+    &__container{
+        width: 90%;
+        margin: 0 auto;
+        border-top: #f9cdcd80 solid 2px;
+    }
+    &__svg{
+        fill: #f9cdcd;
+        width: 1000px;
+        margin: 20px 0;
+    }
+}
+
+@keyframes opacity{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
