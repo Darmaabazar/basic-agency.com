@@ -39,7 +39,7 @@
             width: 100%;
             height: 100%;
             background-color: #252422;
-            animation: hero-img-animation 1s 1 0.8s ease-in-out forwards;
+            animation: hero-img-animation 0.8s 1 0.8s ease-in-out forwards;
         }
         &-sub{
             display: inline-block;

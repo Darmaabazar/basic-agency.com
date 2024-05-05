@@ -26,6 +26,7 @@
         font-size: 0.7rem;
         line-height: 0.8rem;
         font-weight: 500;
+        animation: opacity 1.2s 1 ease-in-out forwards;
     }
     &__item-2{
         grid-column: 1 / 2;
@@ -59,6 +60,7 @@
     &__decoration{
         font-size: 8rem;
         line-height: 2rem;
+        animation: opacity 1.2s 1 ease-in-out forwards;
     }
     &__item-4{
         grid-column: 3 / 4;
@@ -80,12 +82,14 @@
         font-size: 1.4rem;
         font-weight: 700;
         margin-bottom: 20px;
+        animation: opacity 1.2s 1 ease-in-out forwards;
     }
     &__mail{
         color: #252422;
         &:hover{
             text-decoration: none;
         }
+        animation: opacity 1.2s 1 ease-in-out forwards;
     }
     &__link{
         display: inline-block;
@@ -127,6 +131,168 @@
 }
 
 
+
+
+.offices{
+    width: 100%;
+    background-color: #f4f4f4;
+    color: #252422;
+    padding: 140px 0;
+    &__container{
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 32% 68%;
+        grid-template-rows: 25% 25% 25% 25%;
+        justify-content: space-between;
+        align-content: start;
+    }
+    &__item-1{
+        grid-row: 1 / 5 ;
+        border-right: #252422 solid 2px;
+    }
+    &__title{
+        font-size: 2.5rem;
+    }
+    &__item-2{
+        grid-row: 1 / 2 ;
+        border-bottom: #252422 solid 2px;
+        margin-left: 20px;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+    }
+    &__item-3{
+        grid-row: 2 / 3 ;
+        border-bottom: #252422 solid 2px;
+        margin-left: 20px;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+    }
+    &__item-4{
+        grid-row: 3 / 4 ;
+        border-bottom: #252422 solid 2px;
+        margin-left: 20px;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+    }
+    &__item-5{
+        grid-row: 4 / 5 ;
+        margin-left: 20px;
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+    }
+    &__card{
+        width: 50%;
+        margin-bottom: 10px;
+    }
+    &__card-1{
+        padding-right: 10px;
+        border-right: #252422 solid 1px;
+    }
+    &__card-2{
+        padding-left: 10px;
+    }
+    &__media-container{
+        width: 100%;
+    }
+    &__media{
+        width: 100%;
+        object-fit: cover;
+    }
+    &__card-title{
+        font-size: 1.5rem;
+        margin: 10px 0;
+    }
+    &__card-text{
+        line-height: 1rem;
+        margin: 5px 0;
+    }
+}
+
+
+
+
+.follow{
+    width: 100%;
+    background-color: #f4f4f4;
+    color: #252422;
+    padding-top: 80px;
+    padding-bottom: 160px;
+    &__container{
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 32% 68%;
+        grid-template-rows: 5% 95%;
+        justify-content: space-between;
+        align-content: start;
+        border-top: #252422 solid 1px;
+    }
+    &__item-1{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        padding: 10px 0;
+    }
+    &__item-2{
+        grid-column: 2/3;
+        grid-row: 1/2;
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+    }
+    &__span-3{
+        font-size: 1.5rem;
+    }
+    &__item-3{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    &__item-4{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    &__title{
+        font-size: 2.5rem;
+        margin-top: 80px;
+    }
+    &__sub-title{
+        margin-top: 80px;
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+    &__list{
+        list-style: none;
+    }
+    &__list-item{
+        margin-bottom: 15px;
+    }
+    &__list-link{
+        color: #252422;
+    }
+}
+
+
+
+@keyframes opacity{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 @keyframes hero-img-animation{
     0%{
         height: 100%;
