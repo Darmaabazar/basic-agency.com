@@ -16,3 +16,21 @@ const scroll = new LocomotiveScroll({
 });
 
 
+
+// var cursor = document.querySelector(".cursor");
+
+// var mouseX = 0, mouseY = 0;
+
+// document.querySelector(".hero").on("mousemove", function(e) {
+//   mouseX = e.pageX;
+//   mouseY = e.pageY;
+
+// });
+
+// cursor.style.left = mouseX;
+// cursor.style.top = mouseY;
+  
+
+
+
+

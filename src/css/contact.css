@@ -285,6 +285,152 @@
 
 
 
+
+@media screen and (max-width: 1024px) {
+    .contact-hero{   
+        &__container{
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto auto auto auto auto auto auto;
+        }
+        &__item-1{
+            grid-column: 1/2;
+            grid-row: 1 / 2;
+            padding: 0;
+            padding-bottom: 40px;
+        }
+        &__title{
+            line-height: 5rem;
+            font-size: 5rem;
+            margin-bottom: 20px;
+        }
+        &__item-2{
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        &__card{
+            height: 90vh;
+        }
+        &__item-3{
+            grid-column: 1/2;
+            grid-row: 3/4;
+            padding: 50px 0;
+        }
+        &__decoration{
+            font-size: 5rem;
+        }
+        &__item-4{
+            grid-column: 1/2;
+            grid-row: 4/5;
+        }
+        &__item-5{
+            grid-column: 1/2;
+            grid-row: 5/6;
+        }
+        &__item-6{
+            grid-column: 1/2;
+            grid-row: 6/7;
+        }
+        &__item-7{
+            grid-column: 1/2;
+            grid-row: 7/8;
+        }
+        &__item-8{
+            grid-column: 1/2;
+            grid-row: 8/9;
+        }
+        &__mail-title{
+            margin-top: 50px;
+        }
+        &__link{
+            margin-top: 50px;
+        }
+    }
+
+
+    .offices{
+        &__container{
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto auto auto auto;
+        }
+        &__item-1{
+            grid-row: 1 / 2 ;
+            border-right: none;
+            padding-bottom: 50px;
+        }
+        &__item-2{
+            grid-row: 2/3 ;
+            margin-left: 0;
+        }
+        &__item-3{
+            grid-row: 3/4 ;
+            margin-left: 0;
+        }
+        &__item-4{
+            grid-row: 4/5 ;
+            margin-left: 0;
+        }
+        &__item-5{
+            grid-row: 5/6 ;
+            margin-left: 0;
+        }
+    }
+
+
+    .follow{   
+        &__container{
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto auto auto;
+        }
+        &__item-1{
+            grid-column: 1/2;
+            grid-row: 1/2;
+            padding: 10px 0;
+        }
+        &__item-2{
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        &__item-3{
+            grid-column: 1/2;
+            grid-row: 3/4;
+        }
+        &__item-4{
+            grid-column: 1/2;
+            grid-row: 4/5;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .offices{
+        &__item-2{
+            flex-direction: column;
+        }
+        &__item-3{
+            flex-direction: column;
+        }
+        &__item-4{
+            flex-direction: column;
+        }
+        &__item-5{
+            flex-direction: column;
+        }
+        &__card{
+            width: 100%;
+        }
+        &__card-1{
+            padding-right: 0;
+            border-right: none;
+            border-bottom: #252422 solid 2px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+        &__card-2{
+            padding-left: 0;
+        }
+    }
+}
+
 @keyframes opacity{
     0%{
         opacity: 0;

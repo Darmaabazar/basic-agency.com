@@ -7,10 +7,12 @@
         margin: 0 auto;
         display: grid;
         grid-template-columns: 50% 50%;
+        grid-template-rows: 35% 5% 25% 25% 10%;
         justify-content: space-between;
         align-content: start;
     }
     &__item-1{
+        grid-column: 1/2;
         grid-row: 1 / 2;
         padding: 250px 0;
     }
@@ -19,8 +21,13 @@
         font-size: 6rem;
     }
     &__item-2{
+        grid-column: 2/3;
         grid-row: 1 / 4;
         padding: 150px 0;
+    }
+    &__item-3{
+        grid-column: 1/2;
+        grid-row: 2/3;
     }
     &__card{
         width: 100%;
@@ -112,6 +119,38 @@
 }
 
 
+
+@media screen and (max-width: 1024px) {
+    .careers-hero{   
+        &__container{
+        grid-template-columns: 100%;
+        grid-template-rows: 25% 5% 45% 30%;
+        }
+        &__item-1{
+            grid-column: 1/2;
+            grid-row: 1 / 2;
+        }
+        &__item-2{
+            grid-column: 1/2;
+            grid-row: 3/4;
+        }
+        &__item-3{
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        &__item-4{
+            grid-column: 1/2;
+            grid-row: 4/5;
+        }
+        &__card{
+            height: 90vh;
+        }
+    }
+}
+
+
+
+
 @keyframes hero-img-animation{
     0%{
         height: 100%;
@@ -120,3 +159,4 @@
         height: 0;
     }
 }
+
