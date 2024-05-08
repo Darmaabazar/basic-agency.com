@@ -29,6 +29,24 @@ const scroll = new LocomotiveScroll({
 
 // cursor.style.left = mouseX;
 // cursor.style.top = mouseY;
+
+
+const  menu = document.querySelector('.header__menu-button');
+const mobileMenu = document.querySelector(".mobile-menu");
+const close = document.querySelector(".mobile-menu__x-btn");
+    
+const toggleModal = function() {
+    mobileMenu.classList.toggle("mobile-menu--active");
+};
+menu.addEventListener('click', function(e){
+
+    toggleModal();
+});
+
+close.addEventListener('click', function() {
+
+    toggleModal();
+});
   
 
 
