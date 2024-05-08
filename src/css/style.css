@@ -970,7 +970,7 @@
             display: none;
         }
         &__menu-icon{
-            display: hide;
+            display: none;
         }
     }
 }
