@@ -124,15 +124,22 @@
     .careers-hero{   
         &__container{
         grid-template-columns: 100%;
-        grid-template-rows: 25% 5% 45% 30%;
+        grid-template-rows: auto auto auto auto;
         }
         &__item-1{
             grid-column: 1/2;
             grid-row: 1 / 2;
+            padding-top: 200px;
+            padding-bottom: 0;
+        }
+        &__title{
+            line-height: 5rem;
+            font-size: 5rem;
         }
         &__item-2{
             grid-column: 1/2;
             grid-row: 3/4;
+            padding: 50px 0;
         }
         &__item-3{
             grid-column: 1/2;
@@ -141,9 +148,17 @@
         &__item-4{
             grid-column: 1/2;
             grid-row: 4/5;
+            margin-bottom: 100px;
         }
         &__card{
             height: 90vh;
+        }
+        &__content{
+            margin-top: 50px;
+            padding: 0;
+            &:after{
+                display: none;
+            }
         }
     }
 }
