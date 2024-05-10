@@ -299,8 +299,8 @@
             padding-bottom: 40px;
         }
         &__title{
-            line-height: 5rem;
-            font-size: 5rem;
+            line-height: 4rem;
+            font-size: 3.5rem;
             margin-bottom: 20px;
         }
         &__item-2{
@@ -402,6 +402,12 @@
 }
 
 @media screen and (max-width: 500px) {
+    .contact-hero{
+        &__title{
+            line-height: 2.5rem;
+            font-size: 3rem;
+        }
+    }
     .offices{
         &__item-2{
             flex-direction: column;

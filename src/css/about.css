@@ -116,8 +116,88 @@
     }
     &__svg{
         fill: #f9cdcd;
-        width: 1000px;
+        width: 80%;
         margin: 20px 0;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+    .about-hero{
+        padding-top: 150px;
+        &__container{
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto auto auto;
+        }
+        &__item-1{
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        &__item-2{
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        &__item-3{
+            grid-column: 1/2;
+            grid-row: 3/4;
+        }
+        &__title{
+            font-size: 4rem;
+            line-height: 4.2rem;
+        }
+        &__paragraph{
+            font-size: 2rem;
+            line-height: 2rem;
+            margin: 40px 0;
+        }
+        &__logo{
+            fill: #f9cdcd;
+            width: 40px;
+        }
+    }
+    .about-images{
+        
+        &__container{
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto;
+            padding-top: 150px;
+        }
+        &__item-1{
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        &__item-2{
+            grid-column: 1/2;
+            grid-row: 1/2;
+            height: 140vh;
+        }
+        &__copyright{
+            font-size: 0.7rem;
+            line-height: 0.7rem;
+            margin: 0;
+            margin-bottom: 100px;
+        }
+    }
+    .about-logo{
+        &__svg{
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .about-hero{
+
+        &__title{
+            font-size: 3rem;
+            line-height: 2rem;
+        }
+        &__paragraph{
+            font-size: 1.5rem;
+        }
     }
 }
 
